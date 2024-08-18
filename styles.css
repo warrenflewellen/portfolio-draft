@@ -23,6 +23,10 @@ section {
   display: block;
 }
 
+.social-icons {
+  text-align: center;
+}
+
 a {
   background-color: transparent;
 }
@@ -91,6 +95,11 @@ footer {
 
 hr {
   visibility: hidden;
+}
+
+h4,
+logo-title {
+  text-align: center;
 }
 
 h1,
@@ -174,12 +183,14 @@ a {
 
 .w3-sidebar {
   height: 100%;
-  width: 200px;
+  width: 400px;
   background-color: black;
   position: fixed !important;
   z-index: 1;
   overflow: auto;
+  margin-top: 0px;
 }
+
 .w3-bar-block .w3-dropdown-hover,
 .w3-bar-block .w3-dropdown-click {
   width: 100%;
@@ -193,6 +204,7 @@ a {
   width: 100%;
   text-align: left;
   padding: 8px 16px;
+  overflow: hidden;
 }
 .w3-main,
 #main {
@@ -211,6 +223,7 @@ a {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
+
 .w3-modal-content {
   margin: auto;
   background-color: #000;
@@ -218,6 +231,11 @@ a {
   padding: 0;
   outline: 0;
   width: 600px;
+}
+
+.sidebar-info {
+  text-align: left;
+  font-size: 12px;
 }
 .w3-bar {
   width: 100%;
@@ -247,11 +265,14 @@ a {
   width: 100%;
   display: block;
   padding: 8px 16px;
-  text-align: left;
+  text-align: center;
   border: none;
   white-space: normal;
   float: none;
   outline: 0;
+  font-size: 15px;
+  text-transform: lowercase;
+  font-weight: 800;
 }
 .w3-bar-block.w3-center .w3-bar-item {
   text-align: center;
@@ -508,6 +529,12 @@ a {
   .w3-sidebar.w3-collapse {
     display: block !important;
   }
+
+  .w3-bar-block,
+  a,
+  a {
+    font-size: 10px;
+  }
 }
 @media (max-width: 992px) and (min-width: 601px) {
   .w3-hide-medium {
@@ -550,6 +577,10 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
+.fa-xmark {
+  font-size: 0.4em; /* Adjust the value as needed */
+}
+
 .w3-display-topleft {
   position: absolute;
   left: 0;
@@ -1322,4 +1353,23 @@ a {
 .w3-border-pale-blue,
 .w3-hover-border-pale-blue:hover {
   border-color: #e7ffff !important;
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.w3-sidebar {
+  overflow: auto; /* Allow scrolling */
+}
+
+.w3-sidebar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+.w3-sidebar {
+  scrollbar-width: none; /* Hide scrollbar */
+}
+
+/* Hide scrollbar for Internet Explorer and Edge */
+.w3-sidebar {
+  -ms-overflow-style: none; /* Hide scrollbar */
 }
