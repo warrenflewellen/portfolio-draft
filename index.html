@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+    />
   </head>
   <body class="w3-light-grey w3-content" style="max-width: 1600px">
     <!-- Sidebar/menu -->
@@ -22,7 +26,7 @@
         <a
           href="#"
           onclick="w3_close()"
-          class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+          class="w3-hide-large w3-right w3-jumbo w3-padding"
           title="close menu"
         >
           <i class="fa-solid fa-xmark"></i>
@@ -36,19 +40,19 @@
           href="#portfolio"
           onclick="w3_close()"
           class="w3-bar-item w3-button w3-padding w3-text-teal"
-          ><i class="w3-margin-right"></i>Portfolio</a
+          >Portfolio</a
         >
         <a
           href="#about"
           onclick="w3_close()"
           class="w3-bar-item w3-button w3-padding"
-          ><i class="w3-margin-right"></i>About</a
+          >About</a
         >
         <a
           href="#contact"
           onclick="w3_close()"
           class="w3-bar-item w3-button w3-padding"
-          ><i class="w3-margin-right"></i>Contact</a
+          >Contact</a
         >
       </div>
       <div class="w3-panel w3-large social-icons">
@@ -60,7 +64,6 @@
           ><i class="fa-brands fa-linkedin-in fa-xl"></i
         ></a>
         <div class="sidebar-info">
-          <h1>Hello!</h1>
           <p>
             I'm Warren, a passionate graphic designer with a knack for blending
             creativity and functionality. With over 2 years of experience in the
@@ -99,8 +102,12 @@
           ><i class="fa fa-bars"></i
         ></span>
         <div class="w3-container">
-          <h5>Graphic Designer / Print & Digital</h5>
-          <h1><b>PROJECTS</b></h1>
+          <p class="job-title-text">Graphic Designer / Print & Digital</p>
+          <p class="intro-text">
+            I'm Warren a passionate graphic designer with a knack for blending
+            creativity and functionality.
+          </p>
+          <p>Projects</p>
         </div>
       </header>
 
@@ -112,6 +119,7 @@
             alt="Norway"
             style="width: 100%"
             class="w3-hover-opacity"
+            class="color-overlay"
           />
           <div class="w3-container w3-white">
             <p><b>Neon Noir</b></p>
@@ -127,6 +135,7 @@
             alt="Norway"
             style="width: 100%"
             class="w3-hover-opacity"
+            class="color-overlay"
           />
           <div class="w3-container w3-white">
             <p><b>Eco-Chic</b></p>

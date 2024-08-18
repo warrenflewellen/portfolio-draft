@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -15,12 +16,38 @@ html {
 body {
   margin: 0;
 }
+
+body,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo-title,
+.job-title-text,
+.intro-text {
+  -webkit-font-smoothing: antialiased; /* For smoother text on WebKit-based browsers */
+  -moz-osx-font-smoothing: grayscale; /* For smoother text on macOS Firefox */
+  text-rendering: optimizeLegibility; /* Improves legibility, especially for larger fonts */
+}
+
 header,
 main,
 menu,
 nav,
 section {
   display: block;
+}
+
+a:hover {
+  cursor: crosshair;
+}
+/* Add this to your styles.css file */
+.w3-bar-item.w3-button {
+  color: black !important;
 }
 
 .social-icons {
@@ -52,8 +79,9 @@ img {
 html,
 body {
   font-family: "HelveticaNeue", sans-serif;
-  font-size: 11px;
-  line-height: 1.5;
+  font-size: 10px;
+  line-height: ;
+  background-color: #fbf7f5 !important;
 }
 html {
   overflow-x: hidden;
@@ -100,6 +128,8 @@ hr {
 h4,
 logo-title {
   text-align: center;
+  font-size: 10px;
+  text-decoration: wavy;
 }
 
 h1,
@@ -153,6 +183,7 @@ a {
   -ms-user-select: none;
   user-select: none;
 }
+
 .w3-disabled,
 .w3-btn:disabled,
 .w3-button:disabled {
@@ -184,7 +215,7 @@ a {
 .w3-sidebar {
   height: 100%;
   width: 400px;
-  background-color: black;
+  background-color: #fbf7f5;
   position: fixed !important;
   z-index: 1;
   overflow: auto;
@@ -202,8 +233,7 @@ a {
 .w3-bar-block .w3-dropdown-hover .w3-button,
 .w3-bar-block .w3-dropdown-click .w3-button {
   width: 100%;
-  text-align: left;
-  padding: 8px 16px;
+
   overflow: hidden;
 }
 .w3-main,
@@ -220,13 +250,13 @@ a {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #fbf7f5(0, 0, 0);
+  background-color: #fbf7f5(0, 0, 0, 0.4);
 }
 
 .w3-modal-content {
   margin: auto;
-  background-color: #000;
+  background-color: #fbf7f5;
   position: relative;
   padding: 0;
   outline: 0;
@@ -235,7 +265,9 @@ a {
 
 .sidebar-info {
   text-align: left;
-  font-size: 12px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  max-width: 200px;
 }
 .w3-bar {
   width: 100%;
@@ -264,19 +296,17 @@ a {
 .w3-bar-block .w3-bar-item {
   width: 100%;
   display: block;
-  padding: 8px 16px;
-  text-align: center;
+  padding: 8px 8px;
   border: none;
   white-space: normal;
   float: none;
   outline: 0;
-  font-size: 15px;
-  text-transform: lowercase;
-  font-weight: 800;
+  font-size: 10px;
+  text-transform: ;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
-.w3-bar-block.w3-center .w3-bar-item {
-  text-align: center;
-}
+
 .w3-block {
   display: block;
   width: 100%;
@@ -531,7 +561,6 @@ a {
   }
 
   .w3-bar-block,
-  a,
   a {
     font-size: 10px;
   }
@@ -574,7 +603,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #fbf7f5(0, 0, 0, 0.5);
   z-index: 2;
 }
 .fa-xmark {
@@ -679,6 +708,11 @@ a {
 .w3-container,
 .w3-panel {
   padding: 0.01em 16px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.job-title-text {
+  font-weight: bold;
 }
 .w3-panel {
   margin-top: 16px;
@@ -954,10 +988,7 @@ a {
 .w3-right {
   float: right !important;
 }
-.w3-button:hover {
-  color: #000 !important;
-  background-color: #ccc !important;
-}
+
 .w3-transparent,
 .w3-hover-none:hover {
   background-color: transparent !important;
@@ -971,31 +1002,7 @@ a {
   color: #000 !important;
   background-color: #ffc107 !important;
 }
-.w3-aqua,
-.w3-hover-aqua:hover {
-  color: #000 !important;
-  background-color: #00ffff !important;
-}
-.w3-blue,
-.w3-hover-blue:hover {
-  color: #fff !important;
-  background-color: #2196f3 !important;
-}
-.w3-light-blue,
-.w3-hover-light-blue:hover {
-  color: #000 !important;
-  background-color: #87ceeb !important;
-}
-.w3-brown,
-.w3-hover-brown:hover {
-  color: #fff !important;
-  background-color: #795548 !important;
-}
-.w3-cyan,
-.w3-hover-cyan:hover {
-  color: #000 !important;
-  background-color: #00bcd4 !important;
-}
+
 .w3-blue-grey,
 .w3-hover-blue-grey:hover,
 .w3-blue-gray,
@@ -1061,7 +1068,7 @@ a {
 .w3-sand,
 .w3-hover-sand:hover {
   color: #000 !important;
-  background-color: #fdf5e6 !important;
+  background-color: #fff6f6 !important;
 }
 .w3-teal,
 .w3-hover-teal:hover {
@@ -1075,13 +1082,13 @@ a {
 }
 .w3-white,
 .w3-hover-white:hover {
-  color: white !important;
-  background-color: black !important;
+  color: black !important;
+  background-color: #fff6f6 !important;
 }
 .w3-black,
 .w3-hover-black:hover {
-  color: #fff !important;
-  background-color: #000 !important;
+  color: #000 !important;
+  background-color: #fbf7f5 !important;
 }
 .w3-grey,
 .w3-hover-grey:hover,
@@ -1094,8 +1101,8 @@ a {
 .w3-hover-light-grey:hover,
 .w3-light-gray,
 .w3-hover-light-gray:hover {
-  color: white !important;
-  background-color: black !important;
+  color: black !important;
+  background-color: #fff6f6 !important;
 }
 .w3-dark-grey,
 .w3-hover-dark-grey:hover,
@@ -1200,7 +1207,7 @@ a {
 }
 .w3-text-sand,
 .w3-hover-text-sand:hover {
-  color: #fdf5e6 !important;
+  color: #fff6f6 !important;
 }
 .w3-text-teal,
 .w3-hover-text-teal:hover {
@@ -1302,7 +1309,7 @@ a {
 }
 .w3-border-sand,
 .w3-hover-border-sand:hover {
-  border-color: #fdf5e6 !important;
+  border-color: #fff6f6 !important;
 }
 .w3-border-teal,
 .w3-hover-border-teal:hover {
@@ -1342,18 +1349,6 @@ a {
 .w3-hover-border-pale-red:hover {
   border-color: #ffe7e7 !important;
 }
-.w3-border-pale-green,
-.w3-hover-border-pale-green:hover {
-  border-color: #e7ffe7 !important;
-}
-.w3-border-pale-yellow,
-.w3-hover-border-pale-yellow:hover {
-  border-color: #ffffcc !important;
-}
-.w3-border-pale-blue,
-.w3-hover-border-pale-blue:hover {
-  border-color: #e7ffff !important;
-}
 
 /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
 .w3-sidebar {
@@ -1372,4 +1367,26 @@ a {
 /* Hide scrollbar for Internet Explorer and Edge */
 .w3-sidebar {
   -ms-overflow-style: none; /* Hide scrollbar */
+}
+
+/* Override hover effect for sidebar items */
+.w3-bar-item.w3-button {
+  transition: none !important; /* Disable transition effects */
+}
+
+.w3-bar-item.w3-button:hover {
+  background-color: transparent !important; /* Remove hover background color */
+}
+
+/* Remove hover effect from sidebar navigation links */
+.w3-bar-item.w3-button {
+  transition: ease-in 0.2s; /* Disable transition effects */
+}
+
+.w3-hover-opacity {
+  transition: opacity 0.4s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+.w3-hover-opacity:hover {
+  opacity: 0.6; /* Adjust the opacity value as needed */
 }
