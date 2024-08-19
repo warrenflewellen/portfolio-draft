@@ -34,12 +34,23 @@ h6,
   text-rendering: optimizeLegibility; /* Improves legibility, especially for larger fonts */
 }
 
+.projects-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  margin-top: 50px;
+}
+
 header,
 main,
 menu,
 nav,
 section {
   display: block;
+}
+span.intro-text {
+  text-transform: none;
+  font-weight: normal;
 }
 
 a:hover {
@@ -62,6 +73,11 @@ a:hover {
   outline-width: 0;
 }
 
+.social-text {
+  font-size: 12px;
+  font-weight: normal;
+}
+
 b,
 strong {
   font-weight: bolder;
@@ -78,10 +94,19 @@ img {
 /* End extract */
 html,
 body {
-  font-family: "HelveticaNeue", sans-serif;
-  font-size: 10px;
-  line-height: ;
+  font-family: "Helvetica", sans-serif;
+  font-size: 12px;
   background-color: #fbf7f5 !important;
+}
+
+b,
+.job-title-text,
+.w3-bar-item {
+  text-transform: uppercase;
+}
+
+.sidebar-info {
+  text-align: justify !important;
 }
 html {
   overflow-x: hidden;
@@ -105,13 +130,13 @@ h6 {
   font-size: 16px;
 }
 .w3-serif {
-  font-family: "HelveticaNeue";
+  font-family: "Helvetica";
 }
 .w3-sans-serif {
-  font-family: "HelveticaNeue";
+  font-family: "Helvetica";
 }
 .w3-monospace {
-  font-family: "HelveticaNeue";
+  font-family: "Helvetica";
 }
 
 footer {
@@ -119,6 +144,7 @@ footer {
   font-size: 9.5px;
   padding-top: 30px;
   padding-bottom: 15px;
+  font-weight: bold;
 }
 
 hr {
@@ -127,9 +153,7 @@ hr {
 
 h4,
 logo-title {
-  text-align: center;
-  font-size: 10px;
-  text-decoration: wavy;
+  font-size: 50px;
 }
 
 h1,
@@ -138,12 +162,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "HelveticaNeue", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-weight: 400;
   margin: 10px 0;
-}
-.w3-wide {
-  letter-spacing: 4px;
 }
 
 .w3-image {
@@ -212,6 +233,11 @@ a {
   border-bottom: none;
 }
 
+.card-title,
+.w3-white {
+  padding: 0 !important;
+}
+
 .w3-sidebar {
   height: 100%;
   width: 400px;
@@ -265,9 +291,9 @@ a {
 
 .sidebar-info {
   text-align: left;
-  font-size: 10px;
-  letter-spacing: 1px;
+  font-size: 12px;
   max-width: 200px;
+  font-weight: 300;
 }
 .w3-bar {
   width: 100%;
@@ -295,16 +321,15 @@ a {
 }
 .w3-bar-block .w3-bar-item {
   width: 100%;
-  display: block;
+  display: flex;
   padding: 8px 8px;
   border: none;
   white-space: normal;
   float: none;
   outline: 0;
-  font-size: 10px;
+  font-size: 12px;
   text-transform: ;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .w3-block {
@@ -562,7 +587,7 @@ a {
 
   .w3-bar-block,
   a {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @media (max-width: 992px) and (min-width: 601px) {
@@ -607,7 +632,7 @@ a {
   z-index: 2;
 }
 .fa-xmark {
-  font-size: 0.4em; /* Adjust the value as needed */
+  font-size: 0.425em; /* Adjust the value as needed */
 }
 
 .w3-display-topleft {
@@ -708,14 +733,15 @@ a {
 .w3-container,
 .w3-panel {
   padding: 0.01em 16px;
-  font-size: 10px;
-  letter-spacing: 1px;
+  font-size: 12px;
 }
+
 .job-title-text {
   font-weight: bold;
 }
 .w3-panel {
-  margin-top: 16px;
+  text-align: left;
+  margin-top: 100px;
   margin-bottom: 16px;
 }
 
