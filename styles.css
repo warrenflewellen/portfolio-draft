@@ -161,10 +161,11 @@ h6 {
 
 footer {
   text-align: center;
-  font-size: 9.5px;
+  font-size: 10px;
   padding-top: 30px;
   padding-bottom: 15px;
-  font-weight: bold;
+  text-transform: lowercase;
+  color: #808080;
 }
 
 hr {
