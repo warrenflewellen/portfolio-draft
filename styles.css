@@ -37,8 +37,28 @@ h6,
 .projects-header {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 10px;
   margin-top: 50px;
+}
+
+.welcome-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.welcome-message {
+  font-weight: normal;
+  text-transform: none;
+  max-width: 100%;
+}
+
+.card-padding {
+  margin-bottom: 5px;
+}
+.w3-container.w3-white {
+  border-bottom: 1px solid #000; /* Adjust the border style, color, and width */
+}
+.w3-white {
+  max-width: 100%;
 }
 
 header,
@@ -151,9 +171,10 @@ hr {
   visibility: hidden;
 }
 
-h4,
-logo-title {
-  font-size: 50px;
+.logo-title {
+  font-size: 100px;
+  color: crimson;
+  font-weight: 800;
 }
 
 h1,
@@ -172,7 +193,8 @@ h6 {
   height: auto;
 }
 img {
-  vertical-align: middle;
+  max-width: 100%;
+  max-height: 100%;
 }
 a {
   color: inherit;
@@ -236,6 +258,7 @@ a {
 .card-title,
 .w3-white {
   padding: 0 !important;
+  margin-bottom: 30px;
 }
 
 .w3-sidebar {
@@ -1415,4 +1438,36 @@ a {
 
 .w3-hover-opacity:hover {
   opacity: 0.6; /* Adjust the opacity value as needed */
+}
+
+/* SCROLL TO TOP BUTTON */
+
+.scroll-top {
+  background: crimson;
+  border: 0;
+  border-radius: 50%;
+  bottom: 0;
+  cursor: pointer;
+  height: 50px;
+  margin: 15px;
+  opacity: 0.75;
+  position: fixed;
+  right: -70px;
+  transition: right 0.2s ease-in-out;
+  width: 50px;
+  z-index: 99;
+}
+.scroll-top.visible {
+  right: 0;
+}
+
+.arrow {
+  border: solid #000000;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  margin-top: 5px;
+  padding: 4px;
+}
+.arrow.up {
+  transform: rotate(-135deg);
 }

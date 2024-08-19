@@ -14,6 +14,9 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
     />
   </head>
+  <button class="scroll-top">
+    <div class="arrow up"></div>
+  </button>
   <body class="w3-light-grey w3-content" style="max-width: 1600px">
     <!-- Sidebar/menu -->
     <nav
@@ -33,13 +36,13 @@
           <!-- Regular style -->
         </a>
 
-        <h4 class="logo-title"><b>WJF</b></h4>
+        <span class="logo-title">wjf</span>
       </div>
-      <div class="w3-bar-block">
+      <div class="w3-bar-block" style="padding-top: 100px" ;>
         <a
           href="#portfolio"
           onclick="w3_close()"
-          class="w3-bar-item w3-button w3-padding w3-text-teal"
+          class="w3-bar-item w3-button w3-padding"
           >+ Portfolio</a
         >
         <a
@@ -86,26 +89,19 @@
           onclick="w3_open()"
           ><i class="fa-solid fa-bars fa-2xs"></i
         ></span>
-        <div class="w3-container">
-          <p class="job-title-text">
-            Graphic Designer / Print & Digital
-
-            <br />
-            <span class="intro-text">
-              I'm Warren, a passionate graphic designer with a knack for
-              blending creativity and functionality. I've worked on a diverse
-              range of projects, from dynamic branding campaigns to engaging web
-              and print designs.</span
-            >
-          </p>
-
-          <p class="projects-header">+ Projects</p>
-        </div>
       </header>
 
       <!-- First Photo Grid-->
-      <div class="w3-row-padding">
-        <div class="w3-third w3-container w3-margin-bottom">
+      <div class="welcome-header w3-row-padding">
+        Graphic Designer / Print & Digital
+        <p class="welcome-message">
+          I'm Warren, a passionate graphic designer with a knack for blending
+          creativity and functionality.
+        </p>
+        <p class="projects-header">+ Projects</p>
+      </div>
+      <div class="w3-row-padding card-padding">
+        <div>
           <img
             src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Swiss_Style_Poster_Design_1_1024x1024.jpg?v=1694015352"
             alt="Norway"
@@ -113,16 +109,18 @@
             class="w3-hover-opacity"
             class="color-overlay"
           />
-          <div class="w3-container w3-white">
-            <p class="card-title">
-              <b>Neon Noir</b>
-              <br />
-              Design a cyberpunk nightclub's branding with bold typography and
-              neon colors.
-            </p>
-          </div>
         </div>
-        <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          <p class="card-title">
+            <b>Neon Noir</b>
+            <br />
+            Design a cyberpunk nightclub's branding with bold typography and
+            neon colors.
+          </p>
+        </div>
+      </div>
+      <div class="w3-row-padding card-padding">
+        <div>
           <img
             src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Swiss_Style_Poster_Design_2_1024x1024.jpg?v=1694015357"
             alt="Norway"
@@ -139,7 +137,9 @@
             </p>
           </div>
         </div>
-        <div class="w3-third w3-container">
+      </div>
+      <div class="w3-row-padding card-padding">
+        <div>
           <img
             src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Swiss_Style_Poster_Design_3_1024x1024.jpg?v=1694015365"
             alt="Norway"
@@ -156,10 +156,9 @@
           </div>
         </div>
       </div>
-      <hr color="transparent" />
       <!-- Second Photo Grid-->
-      <div class="w3-row-padding">
-        <div class="w3-third w3-container w3-margin-bottom">
+      <div class="w3-row-padding card-padding">
+        <div>
           <img
             src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Swiss_Style_Poster_Design_11_1024x1024.jpg?v=1694015354"
             alt="Norway"
@@ -175,7 +174,10 @@
             </p>
           </div>
         </div>
-        <div class="w3-third w3-container w3-margin-bottom">
+      </div>
+      <!--------- START DIV 1----------->
+      <div class="w3-row-padding card-padding">
+        <div>
           <img
             src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Swiss_Style_Poster_Design_8_1024x1024.jpg?v=1694015365"
             alt="Norway"
@@ -191,7 +193,12 @@
             </p>
           </div>
         </div>
-        <div class="w3-third w3-container">
+      </div>
+      <!--------- END DIV 1----------->
+
+      <!--------- START DIV 2----------->
+      <div class="w3-row-padding card-padding">
+        <div>
           <img
             src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Swiss_Style_Poster_Design_6_1024x1024.jpg?v=1694015359"
             alt="Norway"
@@ -208,9 +215,11 @@
           </div>
         </div>
       </div>
-      <footer>&copy; WJF 2024</footer>
-      <!-- End page content -->
+      <!--------- END DIV 1----------->
     </div>
+    <footer>&copy; WJF 2024</footer>
+
+    <!-- End page content -->
 
     <script>
       // Script to open and close sidebar
@@ -222,6 +231,96 @@
       function w3_close() {
         document.getElementById("mySidebar").style.display = "none";
         document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+    <!-- SCROLL TO TOP BUTTON -->
+    <script>
+      const colorMax = 192;
+
+      // gets the breakpoint at which the scroll-to-top button should appear
+      const scrollBreakpoint = window.innerHeight * 0.9;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        randomizeBackgrounds();
+        setupScrollListener();
+        setupScrollEvent();
+      });
+
+      // scrolls window to top
+      function setupScrollEvent() {
+        const scrollButton = document.querySelector(".scroll-top");
+
+        scrollButton.addEventListener("click", (e) => {
+          // not the best solution until Safari/Edge support scroll behavior
+          // window.scrollTo({ top: 0, behavior: 'smooth' });
+
+          smoothVerticalScrolling(scrollButton.parentElement, 250, "top");
+        });
+      }
+
+      // prepares the window for a scroll event to show the scroll button
+      function setupScrollListener() {
+        window.addEventListener("scroll", (e) => {
+          const scrollButton = document.querySelector(".scroll-top");
+
+          // const scrollOffset = document.scrollingElement.scrollTop;
+          const scrollOffset = window.scrollY;
+
+          if (scrollOffset >= scrollBreakpoint) {
+            scrollButton.classList.add("visible");
+          } else if (scrollOffset <= 0) {
+            scrollButton.classList.remove("visible");
+          }
+        });
+      }
+
+      function randomizeBackgrounds() {
+        // get all the content containers
+        const contentContainers =
+          document.querySelectorAll(".content-container");
+
+        [].forEach.call(contentContainers, (container) => {
+          // assign random background
+          container.style.background = `rgb(${randVal(colorMax)},${randVal(
+            colorMax
+          )},${randVal(colorMax)})`;
+        });
+      }
+
+      // random between 0 to max
+      function randVal(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+      }
+
+      // uses a timeout to scroll to top
+      function smoothVerticalScrolling(e, time, where) {
+        // gets the element's top position relative to the viewport
+        const eTop = e.getBoundingClientRect().top;
+
+        // divides the top offset into 100 steps to be ellapsed
+        const eAmt = eTop / 100;
+
+        // starting time
+        let curTime = 0;
+
+        // not to exceed the desired duration
+        while (curTime <= time) {
+          // call a function to execute at one hundreth of the desired scroll time
+          window.setTimeout(SVS_B, curTime, eAmt, where);
+          // increase by one hundreth of the desired time to execute exactly 100 times
+          curTime += time / 100;
+        }
+      }
+
+      function SVS_B(eAmt, where) {
+        // scroll by half the hundredth of the top offset if destination is not top (since to center only involves scrolling either in the top or bottom half of the window)
+        if (where == "center" || where == "") {
+          window.scrollBy(0, eAmt / 2);
+        }
+        // otherwise scroll the full amount
+        if (where == "top") {
+          window.scrollBy(0, eAmt);
+        }
       }
     </script>
   </body>
